@@ -1,0 +1,31 @@
+Project Directory
+|-AgenticAi_Claude
+|-ecommerce-website
+
+cd AgenticAi_Claude
+
+source venv/bin/activate
+python run.py
+
+
+##inside AgenticAi_Claude(Seperate terminal)
+cd frontend
+
+npm start
+
+
+##
+cd ecommerce-website
+source venv/bin/activate
+python run.py
+
+##inside ecommerce-website(Seperate Terminal)
+cd frontend 
+npm start
+
+
+
+
+
+./run_all.sh
+

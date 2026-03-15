@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd /home/theperson/Vajra/MyProjects/z_buckupTra/bb/C26/AgenticAi_Claude/frontend && npm install chart.js react-chartjs-2 2>&1 | tail -5)",
+      "Bash(cd /home/theperson/Vajra/MyProjects/z_buckupTra/bb/C26/AgenticAi_Claude && python -c \"from backend.database import init_database, get_dashboard_stats, query_tickets_raw, update_ticket_triage; print\\('database.py OK'\\)\" 2>&1)",
+      "Bash(python -c \"from backend.triage import triage_ticket, nlp_query_tickets; print\\('triage.py OK'\\)\" 2>&1)",
+      "Bash(python -c \"\nfrom backend.database import init_database, get_tickets\ninit_database\\(\\)\ntickets = get_tickets\\(\\)\nprint\\(f'Tickets in DB: {len\\(tickets\\)}'\\)\nif tickets:\n    t = tickets[0]\n    print\\(f'Has target_category column: {\\\\\"target_category\\\\\" in t}'\\)\n    print\\(f'Has resolver_group column: {\\\\\"resolver_group\\\\\" in t}'\\)\n    print\\(f'Has sla_deadline column: {\\\\\"sla_deadline\\\\\" in t}'\\)\n    print\\(f'Has auto_routed column: {\\\\\"auto_routed\\\\\" in t}'\\)\n\" 2>&1)",
+      "Bash(python scripts/generate_mock_tickets.py 2>&1)",
+      "Bash(python -c \"\nfrom backend.database import init_database, get_dashboard_stats\ninit_database\\(\\)\nstats = get_dashboard_stats\\(\\)\nprint\\('by_category:', stats['by_category']\\)\nprint\\('sla_compliance:', stats['sla_compliance']\\)\nprint\\('total_open:', stats['total_open']\\)\nprint\\('total_resolved:', stats['total_resolved']\\)\nprint\\('resolution_trends:', stats['resolution_trends'][:3]\\)\n\" 2>&1)",
+      "Bash(gnome-terminal --version 2>/dev/null)",
+      "Bash(chmod +x /home/theperson/Vajra/MyProjects/z_buckupTra/bb/C26/run_all.sh)",
+      "Bash(grep -n \"def.*blueprint\\\\|api_routes\\\\|api.*json\" /home/theperson/Vajra/MyProjects/C26/ecommerce-website/app/routes/*.py 2>/dev/null | head -20)",
+      "Bash(grep -r \"blueprint\" /home/theperson/Vajra/MyProjects/C26/ecommerce-website/app/routes/*.py 2>/dev/null)",
+      "Bash(grep -n \"db.session\\\\|db.add\\\\|db.delete\\\\|UPDATE\\\\|INSERT\" /home/theperson/Vajra/MyProjects/C26/ecommerce-website/app/routes/*.py | head -30)",
+      "Bash(sqlite3 /home/theperson/Vajra/MyProjects/z_buckupTra/bb/C26/AgenticAi_Claude/agent_data.db \".tables\")",
+      "Bash(sqlite3 /home/theperson/Vajra/MyProjects/z_buckupTra/bb/C26/AgenticAi_Claude/agent_data.db \"SELECT COUNT\\(*\\) FROM tickets;\")",
+      "Bash(sqlite3 -header -column /home/theperson/Vajra/MyProjects/z_buckupTra/bb/C26/AgenticAi_Claude/agent_data.db \"SELECT id, title, status, category FROM tickets ORDER BY id;\")",
+      "Bash(sqlite3 /home/theperson/Vajra/MyProjects/z_buckupTra/bb/C26/AgenticAi_Claude/agent_data.db \"SELECT id, title FROM tickets WHERE id BETWEEN 8 AND 32 ORDER BY id;\")",
+      "Bash(sqlite3 /home/theperson/Vajra/MyProjects/z_buckupTra/bb/C26/AgenticAi_Claude/agent_data.db \"SELECT id, ticket_id, file_path FROM proposed_changes WHERE ticket_id BETWEEN 8 AND 32;\" && sqlite3 /home/theperson/Vajra/MyProjects/z_buckupTra/bb/C26/AgenticAi_Claude/agent_data.db \"SELECT id, ticket_id FROM changes_history WHERE ticket_id BETWEEN 8 AND 32;\")",
+      "Bash(sqlite3 /home/theperson/Vajra/MyProjects/z_buckupTra/bb/C26/AgenticAi_Claude/agent_data.db \"DELETE FROM proposed_changes WHERE ticket_id BETWEEN 8 AND 32; DELETE FROM changes_history WHERE ticket_id BETWEEN 8 AND 32; DELETE FROM ai_context WHERE project_id IN \\(SELECT project_id FROM tickets WHERE id BETWEEN 8 AND 32\\); DELETE FROM tickets WHERE id BETWEEN 8 AND 32; SELECT 'Deleted. Remaining tickets:'; SELECT id, title FROM tickets ORDER BY id;\")",
+      "Bash(sqlite3 /home/theperson/Vajra/MyProjects/z_buckupTra/bb/C26/AgenticAi_Claude/agent_data.db \"SELECT id FROM users WHERE username = 'dev1';\")",
+      "Bash(sqlite3 /home/theperson/Vajra/MyProjects/z_buckupTra/bb/C26/AgenticAi_Claude/agent_data.db \"UPDATE tickets SET assignee_id = 2 WHERE assignee_id IS NULL; SELECT id, title, assignee_id FROM tickets;\")",
+      "Bash(cd /home/theperson/Vajra/MyProjects/z_buckupTra/bb/C26/ecommerce-website && grep -n \"url_prefix\\\\|bp = Blueprint\" app/routes/*.py)",
+      "Bash(grep -n \"def to_dict\" app/models/*.py)",
+      "Bash(npm install diff)",
+      "Bash(npm list diff 2>/dev/null)"
+    ]
+  }
+}

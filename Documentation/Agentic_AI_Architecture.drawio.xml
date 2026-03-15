@@ -1,0 +1,170 @@
+<mxfile host="app.diagrams.net" modified="2024-03-15T12:00:00.000Z" agent="Mozilla/5.0" version="24.0.0" type="device">
+  <diagram id="AgentArchitecture" name="System Architecture">
+    <mxGraphModel dx="1434" dy="792" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Actors -->
+        <mxCell id="actor_user" value="User / Admin" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="560" y="40" width="30" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Agentic-AI Domain (Left) -->
+        <mxCell id="domain_agent" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;verticalAlign=top;align=left;spacingLeft=10;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="60" y="160" width="480" height="540" as="geometry"/>
+        </mxCell>
+        <mxCell id="domain_agent_label" value="&lt;b&gt;Agentic-AI Support System (localhost:8080/4000)&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="70" y="170" width="300" height="30" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="agent_frontend" value="&lt;b&gt;Agent Frontend (React Dashboard)&lt;/b&gt;&lt;br&gt;&lt;br&gt;- Ticket Creation Dashboard&lt;br&gt;- AI SLA Tracking Dashboard&lt;br&gt;- NLP Ticket Queries&lt;br&gt;- AI Resolution Review" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="90" y="220" width="220" height="110" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="agent_backend" value="&lt;b&gt;Agent Backend (Flask API)&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="90" y="380" width="410" height="180" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="module_triage" value="Triage Engine&lt;br&gt;(Categorization, Priority, SLA)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="110" y="420" width="160" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="module_nlp" value="NLP Query SQL Translator" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="110" y="470" width="160" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="module_fetcher" value="Blueprint Fetcher" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="290" y="420" width="190" height="40" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="module_proposer" value="File Context Manager &amp;amp; Proposer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="290" y="470" width="190" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="module_db_tickets" value="History DB&lt;br&gt;(Tickets/Changes/SLA)" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#ffffff;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="120" y="600" width="140" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- Claude Server -->
+        <mxCell id="claude_api" value="&lt;b&gt;Claude 3.5 Sonnet&lt;/b&gt;&lt;br&gt;(Anthropic API)" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="140" y="740" width="220" height="110" as="geometry"/>
+        </mxCell>
+
+        <!-- Target E-commerce Domain (Right) -->
+        <mxCell id="domain_target" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;verticalAlign=top;align=left;spacingLeft=10;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="610" y="160" width="480" height="540" as="geometry"/>
+        </mxCell>
+        <mxCell id="domain_target_label" value="&lt;b&gt;Target E-commerce System (localhost:5001)&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="620" y="170" width="300" height="30" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="target_frontend" value="&lt;b&gt;Store Frontend&lt;/b&gt;&lt;br&gt;&lt;b&gt;(Customer UI)&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;verticalAlign=center;" vertex="1" parent="1">
+          <mxGeometry x="650" y="220" width="220" height="80" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="target_backend" value="&lt;b&gt;Store Backend (Flask)&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#82b366;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="650" y="380" width="410" height="180" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="target_jwt" value="JWT Auth (Fixed)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="670" y="420" width="160" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="target_cart" value="Cart &amp;amp; Wishlist" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="870" y="420" width="160" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="target_order" value="Order State Machine" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="670" y="470" width="160" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="target_admin" value="Admin Dashboard" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="870" y="470" width="160" height="40" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="target_api_blueprint" value="API Blueprint Endpoint" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="670" y="520" width="370" height="30" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="target_db" value="Store DB&lt;br&gt;(Users/Orders)" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#ffffff;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="650" y="600" width="140" height="80" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="mock_services" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#82b366;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="840" y="600" width="220" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="mock_payment" value="Payment Gateway&lt;br&gt;(Test Cards)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="860" y="630" width="180" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="mock_email" value="Email Service Mock" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="860" y="670" width="180" height="30" as="geometry"/>
+        </mxCell>
+
+        <!-- Connections / Flow -->
+        <mxCell id="edge_user_agent" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;exitX=0;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="actor_user" target="agent_frontend">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="edge_user_target" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="actor_user" target="target_frontend">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="edge_agent_ui_api" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1" source="agent_frontend" target="agent_backend">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="edge_target_ui_api" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1" source="target_frontend" target="target_backend">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="edge_agent_db" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#000000;" edge="1" parent="1" source="agent_backend" target="module_db_tickets">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="edge_target_db" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#000000;" edge="1" parent="1" source="target_backend" target="target_db">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="edge_target_mock" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#000000;dashed=1;" edge="1" parent="1" source="target_backend" target="mock_services">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="855" y="580"/>
+              <mxPoint x="950" y="580"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label_triggers" value="Triggers" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];backgroundColor=#ffffff;" vertex="1" connectable="0" parent="edge_target_mock">
+          <mxGeometry x="0.1263" relative="1" as="geometry">
+            <mxPoint as="offset"/>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- API Calls to Claude -->
+        <mxCell id="edge_triage_claude" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0.25;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#9673a6;strokeWidth=2;" edge="1" parent="1" source="agent_backend" target="claude_api">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="360" y="660"/>
+              <mxPoint x="195" y="660"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label_claude_calls" value="1. Triage Ticket&lt;br&gt;2. Text-to-SQL (NLP)&lt;br&gt;3. Analysis Request" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];backgroundColor=#ffffff;" vertex="1" connectable="0" parent="edge_triage_claude">
+          <mxGeometry x="-0.4" y="2" relative="1" as="geometry">
+            <mxPoint x="2" y="-18" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- System Interaction -->
+        <mxCell id="edge_agent_target_sync" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#b85450;strokeWidth=2;" edge="1" parent="1" source="agent_backend" target="target_api_blueprint">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="500" y="470" as="sourcePoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label_sync" value="1. Fetch Blueprint JSON&lt;br&gt;2. Read/Write Files" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];backgroundColor=#ffffff;" vertex="1" connectable="0" parent="edge_agent_target_sync">
+          <mxGeometry x="0.1" y="-1" relative="1" as="geometry">
+            <mxPoint x="-8" y="-1" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
