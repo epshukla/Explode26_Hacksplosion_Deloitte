@@ -2,6 +2,17 @@
 
 An AI-powered ticket management system that autonomously analyzes bugs, cross-references frontend code against backend API schemas, and proposes minimal targeted fixes for developer review. Built for the CyberCypher 2026 hackathon.
 
+<table>
+  <tr>
+    <td><img src="docs/tickets-dashboard.png" alt="Tickets Dashboard" width="500"/></td>
+    <td><img src="docs/sla-dashboard.png" alt="SLA Dashboard" width="500"/></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Tickets Dashboard</b> — AI-triaged bug tickets with priority, SLA, and resolution status</td>
+    <td align="center"><b>SLA Dashboard</b> — Live compliance tracking, ticket volumes, and resolution trends</td>
+  </tr>
+</table>
+
 ## How It Works
 
 ```
@@ -41,6 +52,14 @@ Developer reviews inline diff → Accept / Reject / Rollback
 ├── run_all.sh               # Launches all 4 services
 └── .gitignore
 ```
+
+## Architecture
+
+<p align="center">
+  <img src="docs/architecture.png" alt="System Architecture" width="800"/>
+</p>
+
+The Agentic AI system (left) communicates with the target e-commerce project (right) by fetching the API blueprint schema and reading/writing source files. Claude analyzes the code, cross-references field names, and proposes minimal fixes.
 
 ## Quick Start
 
